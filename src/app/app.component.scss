@@ -1,0 +1,31 @@
+.loader-costum {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(0,0,0,0.7);
+    .spinner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+// .main{
+//     // background-color: #faf2e9;
+//     background-image: url('../assets/img/bg2.jpg');   
+//     background-size: cover;
+//     background-attachment: fixed;
+//     background-repeat: no-repeat;
+// }
+// @media (max-width: 835.20px) {
+//     .main{
+//         background-image: url('../assets/img/bg2.png');   
+//     }
+// }
+// @media (max-width: 420px) {
+//     .main {
+//         background-size: 100% 100%;
+//     }    
+// }

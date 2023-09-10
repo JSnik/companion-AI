@@ -1,0 +1,199 @@
+/// autorisation styles ///
+
+.general-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  max-width: 100% !important;
+}
+.right-form-gap{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 130px);
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+/// forgot password styles ///
+
+.password-reset-right-form-gap{
+  gap: 468px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/// email sent styles ///
+
+.email-sent-right-form-gap{
+  gap: 468px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email-sent-form{
+  gap: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .right-from-txt{
+    font-size: 18px !important;
+    width: auto;
+  }
+  a{
+    font-size: 18px !important;
+  }
+}
+
+
+
+/// reset password styles ///
+
+.reset-password-right-form-gap{
+  gap: 309px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/// create new account styles ///
+
+.create-new-account-right-form-gap{
+  gap: 81px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.create-new-account-txt{
+  font-size: 13px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+.create-new-account-input-div{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.create-new-acc-checkbox{
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  text-align: start;
+  width: 494px;
+
+}
+
+/// verify email styles ///
+
+.verify-email-right-form-gap{
+  gap: 163px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.verify-email-right-form-txts{
+  gap: 32px;
+}
+.verify-email-title{
+  width: 776px;
+
+}
+.verify-email-text{
+  width: 776px;
+  font-size: 18px;
+
+  a{
+    font-weight: 500;
+  }
+}
+
+/// sign-in-with-google styles ///
+
+
+.sign-in-with-google-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  z-index: 1;
+}
+.sign-in-with-google-bg-image{
+  background-size: 50% 50%;
+  background-image: url(/assets/img/path69.png);
+  opacity: .15;
+}
+
+
+
+
+/// nickname styles ///
+
+
+.nickname-right-form-gap{
+  gap: 465px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/// what brings you here styles ///
+
+.option-div{
+  display: flex;
+  width: 520px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+.what-brings-you-here-right-form-gap{
+  gap: 311px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.option{
+  display: flex;
+  height: 38px;
+  padding: 12px 71px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  width: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  span{
+    font-weight: 500;
+  }
+}
+
+.option-active {
+  color: rgba(67, 76, 230, 1);
+  background-color: rgba(67, 76, 230, 0.15);
+}
+
+/// workspace styles ///
+
+
+.workspace-right-form-gap{
+  gap: 465px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

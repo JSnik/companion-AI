@@ -1,0 +1,439 @@
+/// autorisation styles ///
+
+.right-form-gap{
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    align-items: center;
+}
+
+
+
+/// forgot password styles ///
+
+    .password-reset-right-form-gap{
+        gap: 468px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+/// email sent styles ///
+ 
+    .email-sent-right-form-gap{
+        gap: 468px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .email-sent-form{
+        gap: 64px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .right-from-txt{
+            font-size: 18px !important;
+            width: auto;
+        }
+        a{
+            font-size: 18px !important;
+        }
+    }
+
+
+
+/// reset password styles ///
+
+    .reset-password-right-form-gap{
+        gap: 309px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+/// create new account styles ///
+
+.create-new-account-right-form-gap{
+    gap: 81px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.create-new-account-txt{
+    font-size: 13px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+.create-new-account-input-div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.create-new-acc-checkbox{
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    text-align: start;
+    width: 494px;
+
+}
+
+/// verify email styles ///
+
+.verify-email-right-form-gap{
+    gap: 163px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.verify-email-right-form-txts{
+    gap: 32px;
+}
+.verify-email-title{
+    width: 776px;
+
+}
+.verify-email-text{
+    width: 776px;
+    font-size: 18px;
+
+    a{
+        font-weight: 500;
+    }
+}
+
+/// sign-in-with-google styles ///
+
+
+.sign-in-with-google-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    z-index: 1;
+}
+.sign-in-with-google-bg-image{
+    background-size: 50% 50%;
+    background-image: url(/assets/img/path69.png);
+    opacity: .15;
+}
+
+
+
+/// nickname styles ///
+
+
+.nickname-right-form-gap{
+    gap: 465px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/// what brings you here styles ///
+
+.option-div{
+    display: flex;
+    width: 520px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+.what-brings-you-here-right-form-gap{
+    gap: 311px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.option{
+    display: flex;
+    height: 38px;
+    padding: 12px 71px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    width: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    span{
+        font-weight: 500;
+    }
+}
+
+.option-active {
+    color: rgba(67, 76, 230, 1);
+    background-color: rgba(67, 76, 230, 0.15);
+}
+
+/// workspace styles ///
+
+
+.workspace-right-form-gap{
+    gap: 465px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/// invite teammate styles ///
+
+.invite-your-teammate-right-form-gap{
+    gap: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.disabled-button{
+    border-radius: 8px;
+    background-color: rgba(242, 242, 242, 1);
+    color: rgba(126, 133, 148, 1);
+    padding: 10px 196px;
+    width: 520px;
+    height: 41px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: unset;
+}
+.enabled-button{
+    border-radius: 8px;
+    background-color: rgba(67, 76, 230, 0.149);
+    color: rgb(67, 76, 230);
+    padding: 10px 180px;
+    width: 520px;
+    height: 41px;
+    border: none;
+}
+.input-button-gap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.member-list-div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scrollbar-width: none;
+    height: 249px;
+    padding-top: 55px;
+
+}
+.member-list-div::-webkit-scrollbar {
+    width: 0;
+  }
+.member-list{
+    width: 520px;
+    padding: 9px 20.5px 9px 16px;
+    border-radius: 8px;
+    background: rgb(246, 247, 249);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+
+    p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    span{
+    font-size: 15px;
+    font-weight: 500;
+    }
+}
+.member-list-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.remove-member-icon{
+    margin-left: auto;
+}
+.remove-member-icon:hover{
+    filter: invert(19%) sepia(13%) saturate(3154%) hue-rotate(133deg) brightness(89%) contrast(102%);
+}
+.member-list-profile-image{
+    width: 30.833px;
+    height: 30.833px;
+}
+/// connect your platforms styles ///
+
+.connect-platform-right-form-gap{
+    gap: 410px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connect-platform-div{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+.connect-platform-box{
+    display: flex;
+    width: 520px;
+    height: 59px;
+    padding: 9px 20.5px 9px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(246, 247, 249);
+    cursor: pointer;
+}
+.connect-platform-box:hover p{
+    color: rgba(23, 23, 23, 1) !important;
+}
+.connect-platform-right-form-txt{
+    width: 467px;
+}
+/// submit's popup styles///
+
+.connect-popup-form-div{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(23, 23, 23, 0.16);
+}
+.connect-popup-form{
+    background-color:rgb(255, 255, 255);
+    border-radius: 8px;
+    width: 660px;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+}
+.connect-popup-txt{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+.connect-popup-images-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.connect-popup-img{
+    width: 48px;
+    height: 48px;
+}
+.connect-popup-img-div{
+    width: 86px;
+    height: 86px;
+    border-radius: 100px;
+    border: 1px solid rgb(218, 220, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.connect-user-div{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.connect-user-img{
+    width: 18px;
+    border-radius: 333px;
+    height: 18px;
+}
+.connect-user-email{
+    color: rgb(87, 94, 115);
+    font-size: 13px;
+    font-weight: 500;
+}
+.connect-popup-description{
+    width: 564px;
+    font-size: 14px;
+    color: rgba(46, 46, 46, 1);
+    line-height: 155%;
+    font-weight: 500;
+}
+.connect-popup-btn-div{
+    display: flex;
+    gap: 6px;
+}
+.connect-popup-cancel-button{
+    width: 132px;
+    height: 38px;
+    padding: 12px 32px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    color: rgba(87, 94, 115, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.connect-popup-connect-button{
+    width: 132px;
+    height: 38px;
+    padding: 12px 32px;
+    border-radius: 5px;
+    background-color:rgb(66, 74, 230);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.connect-popup-gap{
+    gap: 29px;
+    display: flex;
+    flex-direction: column;
+}
+.connect-popup-text-gap{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.gap2{
+    gap: 25px;
+    align-items: center;
+}
+.gap3{
+    gap: 40px;
+    align-items: center;
+}
+
+/// end of auth flow styles ///
+
+
+.end-of-flow-text{
+    opacity: .15;
+}
+.end-of-auth-flow-right{
+    height: 85vh;
+    justify-content: flex-end;
+}

@@ -1,0 +1,315 @@
+<div class="general-div">
+    <div class="general-left primary-bg-color">
+        <div class="general-bg-image"></div>
+        <a href="">
+            <div class="general-go-back-div">
+                <img src="/assets/img/arrow-left.png" alt="">
+                <h4 class="primary-font-color">Back to home</h4>
+            </div>
+        </a>
+        <form class="general-left-form" action="">
+            <h2 class="primary-font-color">Get <span class="secondary-font-color general-left-form-txt">more</span> from your meetings</h2>
+            <p class="form-border"><svg width="392" height="1" viewBox="0 0 392 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="0.5" x2="392" y2="0.5" stroke="white" stroke-opacity="0.4" stroke-dasharray="10 10"/>
+            </svg>
+            </p>
+            <ul class="primary-font-color general-offer-list-ul">
+                <li class="general-offer-list-li"> <img src="/assets/img/attach-circle.png" alt=""> Upload and share files easily</li>
+                <li class="general-offer-list-li"> <img src="/assets/img/video.png" alt=""> Automatically record, transcribe and store the meetings</li>
+                <li class="general-offer-list-li"> <img src="/assets/img/messages.png" alt=""> Automatically record, transcribe and store the meetings</li>
+                <li class="general-offer-list-li"> <img src="/assets/img/device-message.png" alt=""> Automatically record, transcribe and store the meetings</li>
+                <li class="general-offer-list-li"> <img src="/assets/img/calendar-edit.png" alt=""> Manage your schedule or view your teammates' scheduled meetings</li>
+                <li class="general-offer-list-li"> <img src="/assets/img/document-text.png" alt=""> Use a common document for the group, work together around the project</li>
+            </ul>
+        </form>
+    </div>
+
+<!--    first-->
+    <div class="general-right secondary-bg-color">
+        <div class="right-form-gap" *ngIf="createFirst">
+            <form class="general-right-form" action="" [formGroup]="form">
+                <div class="general-right-form-txts">
+                    <h3>Create new account</h3>
+                    <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
+                </div>
+                <a class="forth-font-color" href="">
+                    <div class="general-google-btn">
+                        <img class="general-google-icon" src="/assets/img/google-icon.png" alt="">
+                        <h5>Sign in with Google</h5>
+                    </div>
+                </a>
+                <p class="fifth-font-color">or</p>
+                <div class="general-input-div">
+                    <div class="create-new-account-input-div">
+                        <input class="general-input" type="email" placeholder="Email Address" formControlName="email"
+                               [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched">
+                        <p class="tertiary-font-color create-new-account-txt"> &#9679; Using your work email makes it easier to connect with your team</p>
+                    </div>
+                    <div class="general-input-container">
+                        <div class="create-new-account-input-div">
+                            <input class="general-input" type="password" placeholder="Password" formControlName="password"
+                                   [class.invalid-input]="form.get('password')!.invalid && form.get('password')!.touched">
+                            <p class="sixth-font-color general-error-txt"> &#9679; Password must contain min 1 capital letter</p>
+                        </div>
+                        <span class="general-input-icon">
+                 <img src="/assets/img/eye.png" alt="">
+               </span>
+
+                    </div>
+                    <div class="general-input-container">
+                        <input class="general-input" type="password" placeholder="Confirm Password" formControlName="confirmPassword"
+                               [class.invalid-input]="form.get('confirmPassword')!.invalid && form.get('confirmPassword')!.touched">
+                        <span class="general-input-icon">
+                <img src="/assets/img/eye.png" alt="">
+              </span>
+                    </div>
+
+                    <div class="general-save-checkbox-div-main">
+                        <div class="general-save-checkbox-div create-new-acc-checkbox">
+                            <input class="general-checkbox" type="checkbox" id="remember-checkbox">
+                            <label class="tertiary-font-color " for="remember-checkbox general-checkbox-crossed" >By clicking “Create account” you automatically agree to <a href="">our Terms of Service</a> and <a href="">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </form>
+            <div class="general-submit-div">
+                <button class="general-button" (click)="createAcc()" [class.general-button-disabled]="form.get('email')!.invalid || form.get('password')!.invalid || form.get('password')!.value !== form.get('confirmPassword')!.value">Create Account</button>
+                <p class="tertiary-font-color general-button-bottom-txt">Already have a companion?<a routerLink="../login"> Sign in</a></p>
+            </div>
+        </div>
+        <!--    #first-->
+        <!--    second-->
+        <div class="right-form-gap" *ngIf="createSecond">
+            <form class="general-right-form email-sent-form" action="">
+                <div class="general-right-form-txts verify-email-right-form-txts">
+                    <h3 class="verify-email-title">please verify your email address by following link in your inbox</h3>
+                    <svg width="136" height="120" viewBox="0 0 136 120" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Bot_00000117669704253052663600000001853966508606232765_"><g id="Shape_00000137840811946863901630000013345022216632733842_"><path d="M134.515 59.649C134.114 58.191 133.947 56.622 126.596 54.255C125.8 48.012 124.498 42.174 122.362 39.765C121.387 38.667 116.95 32.649 88.4942 30.648C86.2414 23.865 84.7215 23.694 83.3093 23.304C81.8971 22.914 76.7123 22.635 71.7398 22.539V13.995C73.9747 12.699 75.4796 10.275 75.4796 7.5C75.4796 3.357 72.1317 0 67.9999 0C63.8682 0 60.5203 3.357 60.5203 7.5C60.5203 10.275 62.0252 12.696 64.2601 13.995V22.539C59.2876 22.635 54.1027 22.914 52.6906 23.304C51.2784 23.694 49.7585 23.865 47.5056 30.648C19.0499 32.649 14.613 38.664 13.6377 39.765C11.5015 42.174 10.2 48.009 9.40413 54.255C2.05012 56.625 1.88557 58.194 1.48466 59.649C0.993995 61.431 0.682861 69.201 0.682861 75C0.682861 80.799 0.993995 88.569 1.48466 90.351C1.88557 91.809 2.05311 93.378 9.40413 95.745C10.2 101.988 11.5015 107.826 13.6377 110.235C14.8105 111.558 20.9917 120 67.9999 120C115.008 120 121.189 111.558 122.362 110.235C124.498 107.826 125.8 101.991 126.596 95.745C133.95 93.375 134.114 91.806 134.515 90.351C135.006 88.569 135.317 80.799 135.317 75C135.317 69.201 135.006 61.431 134.515 59.649ZM108.773 98.49C107.894 99.372 103.256 105 67.9999 105C32.7437 105 28.1063 99.372 27.2267 98.49C23.0949 94.347 23.1219 75 23.1219 75C23.1219 75 23.0949 55.653 27.2267 51.51C28.1063 50.628 32.7437 45 67.9999 45C103.256 45 107.894 50.628 108.773 51.51C112.905 55.653 112.878 75 112.878 75C112.878 75 112.905 94.347 108.773 98.49Z" fill="black"/><path d="M134.515 59.649C134.114 58.191 133.947 56.622 126.596 54.255C125.8 48.012 124.498 42.174 122.362 39.765C121.387 38.667 116.95 32.649 88.4942 30.648C86.2414 23.865 84.7215 23.694 83.3093 23.304C81.8971 22.914 76.7123 22.635 71.7398 22.539V13.995C73.9747 12.699 75.4796 10.275 75.4796 7.5C75.4796 3.357 72.1317 0 67.9999 0C63.8682 0 60.5203 3.357 60.5203 7.5C60.5203 10.275 62.0252 12.696 64.2601 13.995V22.539C59.2876 22.635 54.1027 22.914 52.6906 23.304C51.2784 23.694 49.7585 23.865 47.5056 30.648C19.0499 32.649 14.613 38.664 13.6377 39.765C11.5015 42.174 10.2 48.009 9.40413 54.255C2.05012 56.625 1.88557 58.194 1.48466 59.649C0.993995 61.431 0.682861 69.201 0.682861 75C0.682861 80.799 0.993995 88.569 1.48466 90.351C1.88557 91.809 2.05311 93.378 9.40413 95.745C10.2 101.988 11.5015 107.826 13.6377 110.235C14.8105 111.558 20.9917 120 67.9999 120C115.008 120 121.189 111.558 122.362 110.235C124.498 107.826 125.8 101.991 126.596 95.745C133.95 93.375 134.114 91.806 134.515 90.351C135.006 88.569 135.317 80.799 135.317 75C135.317 69.201 135.006 61.431 134.515 59.649ZM108.773 98.49C107.894 99.372 103.256 105 67.9999 105C32.7437 105 28.1063 99.372 27.2267 98.49C23.0949 94.347 23.1219 75 23.1219 75C23.1219 75 23.0949 55.653 27.2267 51.51C28.1063 50.628 32.7437 45 67.9999 45C103.256 45 107.894 50.628 108.773 51.51C112.905 55.653 112.878 75 112.878 75C112.878 75 112.905 94.347 108.773 98.49Z" fill="url(#paint0_linear_377_8685)"/></g><g id="Eye_00000083785803243038131920000009034683912858934169_"><path d="M45.561 90C49.6919 90 53.0406 83.2843 53.0406 75C53.0406 66.7157 49.6919 60 45.561 60C41.4301 60 38.0813 66.7157 38.0813 75C38.0813 83.2843 41.4301 90 45.561 90Z" fill="black"/><path d="M45.561 90C49.6919 90 53.0406 83.2843 53.0406 75C53.0406 66.7157 49.6919 60 45.561 60C41.4301 60 38.0813 66.7157 38.0813 75C38.0813 83.2843 41.4301 90 45.561 90Z" fill="url(#paint1_linear_377_8685)"/></g><g id="Eye_00000165916547609449064420000009554955209463727237_"><path d="M90.4389 90C94.5698 90 97.9186 83.2843 97.9186 75C97.9186 66.7157 94.5698 60 90.4389 60C86.308 60 82.9592 66.7157 82.9592 75C82.9592 83.2843 86.308 90 90.4389 90Z" fill="black"/><path d="M90.4389 90C94.5698 90 97.9186 83.2843 97.9186 75C97.9186 66.7157 94.5698 60 90.4389 60C86.308 60 82.9592 66.7157 82.9592 75C82.9592 83.2843 86.308 90 90.4389 90Z" fill="url(#paint2_linear_377_8685)"/></g><g id="Mouth_00000153663812805937234150000008548433133317120942_"><path d="M75.4796 90C75.4796 94.143 72.1317 97.5 67.9999 97.5C63.8682 97.5 60.5203 94.143 60.5203 90H75.4796Z" fill="black"/><path d="M75.4796 90C75.4796 94.143 72.1317 97.5 67.9999 97.5C63.8682 97.5 60.5203 94.143 60.5203 90H75.4796Z" fill="url(#paint3_linear_377_8685)"/></g></g><defs><linearGradient id="paint0_linear_377_8685" x1="106.248" y1="16.875" x2="11.6315" y2="116.846" gradientUnits="userSpaceOnUse"><stop stop-color="#8A28EC"/><stop offset="1" stop-color="#5C13F7"/></linearGradient><linearGradient id="paint1_linear_377_8685" x1="49.8108" y1="64.2188" x2="31.5813" y2="72.7792" gradientUnits="userSpaceOnUse"><stop stop-color="#8A28EC"/><stop offset="1" stop-color="#5C13F7"/></linearGradient><linearGradient id="paint2_linear_377_8685" x1="94.6887" y1="64.2188" x2="76.4592" y2="72.7792" gradientUnits="userSpaceOnUse"><stop stop-color="#8A28EC"/><stop offset="1" stop-color="#5C13F7"/></linearGradient><linearGradient id="paint3_linear_377_8685" x1="72.2498" y1="91.0547" x2="67.3363" y2="100.284" gradientUnits="userSpaceOnUse"><stop stop-color="#8A28EC"/><stop offset="1" stop-color="#5C13F7"/></linearGradient></defs>
+                    </svg>
+                    <span class="tertiary-font-color verify-email-text">Lorem ipsum dolor sit <a>{{form.get('email')!.value}}</a> adipiscing elit. Sed lorem ipsum, efficitur sit amet lectus id, iaculis tempus nunc. Nam nec interdum nisi. Vestibulum vulputate sapien id tortor sodales tempus.</span>
+                    <span class="tertiary-font-color verify-email-text">Sed elementum scelerisque venenatis. Quisque mattis ante eu
+          porta placerat. Vivamus accumsan efficitur vulputate. Praesent volutpat
+           arcu blandit sapien nec tincidunt. Integer mattis diam et dolor ultricies,
+          Pellentesque ac risus</span>
+                </div>
+            </form>
+
+            <div class="general-submit-div">
+                <button class="general-button" (click)="progressA(1)">Resend confirmation link</button>
+                <p class="tertiary-font-color general-button-bottom-txt">Did you enter the wrong email? <a (click)="returnToFirstStep()" class="cursor-ponter">Edit it</a></p>
+            </div>
+        </div>
+        <!--    #second-->
+<!--        progress-bar-section-->
+                <div class="general-progress-border-div" *ngIf="progressFirst || progressSecond || progressThird || progressFourth || progressFifth">
+                    <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarFirst"></div>
+                    <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarSecond"></div>
+                    <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarThird"></div>
+                    <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarFourth"></div>
+                    <div class="secondary-border-color general-progress-border" [class.primary-border-color]="styleBarFifth"></div>
+                </div>
+    <!--        first-bar-->
+                <ng-container *ngIf="progressFirst">
+                    <div class="right-form-gap">
+                        <form class="general-right-form nickname-right-form" action="">
+                            <div class="general-right-form-txts">
+                                <h3>It’s nice to meet you!</h3>
+                                <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
+                            </div>
+                            <input class="general-input" type="text" placeholder="What woult yo like to be called" formControlName="name">
+                        </form>
+                        <div class="general-submit-div">
+                            <button class="general-button" (click)="progressA(2)">Next Step</button>
+                            <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
+                        </div>
+                    </div>
+                </ng-container>
+    <!--        #first-bar-->
+    <!--        second-bar-->
+                <ng-container *ngIf="progressSecond">
+                    <div class="right-form-gap">
+                        <form class="general-right-form" action="">
+                            <div class="general-right-form-txts">
+                                <h3>What brings you here?</h3>
+                                <span class="tertiary-font-color general-right-form-txt">We’d love to get to know you better so we can imporve the product for you!</span>
+                                <div class="option-div">
+                                    <div class="option fifth-font-color forth-bg-color"><span>Work</span></div>
+                                    <div class="option option-active"><span>School</span></div>
+                                    <div class="option fifth-font-color forth-bg-color"><span>Personal</span></div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="custom-dropdown general-select-div" (click)="toggleDropdown()">
+                              <div class="selected-option general-select" [style]="dropdownStyle">
+                                <ng-container *ngIf="selectedOption; else placeholderText">
+                                  {{ selectedOption }}
+                                </ng-container>
+                                <ng-template #placeholderText>
+                                  <span class="placeholder-text">
+                                    Which best describes your role?
+                                  </span>
+                                </ng-template>
+                                <ng-container *ngIf="isDropdownOpen">
+                                  <img src="/assets/img/arrow-up.png" alt="Open Icon" class="dropdown-icon general-select-icon">
+                                </ng-container>
+                                <ng-container *ngIf="!isDropdownOpen">
+                                  <img src="/assets/img/arrow-down.png" alt="Closed Icon" class="dropdown-icon general-select-icon">
+                                </ng-container>
+                              </div>
+                              <div class="general-options" *ngIf="isDropdownOpen" >
+                                <div class="general-option" (click)="selectOption('Transcribing meetings')">Design / Product / Engineering</div>
+                                <div class="general-option" (click)="selectOption('Note-taking')">Marketing</div>
+                                <div class="general-option" (click)="selectOption('Storing recordings')">Sales / Sales Operations</div>
+                                <div class="general-option" (click)="selectOption('Managing team projects')">Founder / CEO / Business Owner</div>
+                              </div>
+                            </div> -->
+
+
+                            <div class="custom-dropdown general-select-div" (click)="toggleDropdown()">
+                                <div class="selected-option general-select general-select" [style]="dropdownStyle">
+                                    <ng-container *ngIf="selectedOption; else placeholderText">
+                                        {{ selectedOption }}
+                                    </ng-container>
+                                    <ng-template #placeholderText>
+              <span class="placeholder-text">
+                What’s the one main activity you want to use this app?
+              </span>
+                                    </ng-template>
+                                    <ng-container *ngIf="isDropdownOpen">
+                                        <img src="/assets/img/arrow-up.png" alt="Open Icon" class="dropdown-icon general-select-icon">
+                                    </ng-container>
+                                    <ng-container *ngIf="!isDropdownOpen">
+                                        <img src="/assets/img/arrow-down.png" alt="Closed Icon" class="dropdown-icon general-select-icon">
+                                    </ng-container>
+                                </div>
+                                <div class="general-options" *ngIf="isDropdownOpen" >
+                                    <div class="general-option" (click)="selectOption('Transcribing meetings')">Transcribing meetings</div>
+                                    <div class="general-option" (click)="selectOption('Note-taking')">Note-taking</div>
+                                    <div class="general-option" (click)="selectOption('Storing recordings')">Storing recordings</div>
+                                    <div class="general-option" (click)="selectOption('Managing team projects')">Managing team projects</div>
+                                </div>
+                            </div>
+
+                        </form>
+                        <div class="general-submit-div">
+                            <button class="general-button" (click)="progressA(3)">Next Step</button>
+                            <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
+                        </div>
+                    </div>
+                </ng-container>
+    <!--        #second-bar-->
+    <!--        third-bar-->
+                <ng-container *ngIf="progressThird">
+                    <div class="right-form-gap">
+                        <form class="general-right-form nickname-right-form" action="">
+                            <div class="general-right-form-txts">
+                                <h3>Create your workspace</h3>
+                                <span class="tertiary-font-color general-right-form-txt">Effortlessly share your meeting recordings and notes and retire the phrase “can i get a copy of that recording”.</span>
+                            </div>
+                            <input class="general-input" type="text" placeholder="Workspace name">
+                        </form>
+                        <div class="general-submit-div">
+                            <button class="general-button" (click)="progressA(4)">Next Step</button>
+                            <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
+                        </div>
+                    </div>
+                </ng-container>
+    <!--        #third-bar-->
+    <!--        fourth-bar-->
+                <ng-container *ngIf="progressFourth">
+                    <div class="right-form-gap">
+                        <form class="general-right-form nickname-right-form" action="">
+                            <div class="general-right-form-txts">
+                                <h3>Invite your team</h3>
+                                <span class="tertiary-font-color general-right-form-txt">Effortlessly share your meeting recordings and notes and retire the phrase “can i get a copy of that recording”.</span>
+                            </div>
+
+                            <div class="input-button-gap">
+                                <div class="input-container">
+                                    <input class="general-input" type="text" placeholder="Add member’s email">
+
+                                    <!-- <div class="custom-dropdown general-role-select custom-dropdown-large" (click)="toggleDropdownLarge()">
+                                      <div class="selected-option selected-role-option selected-option-large" [style]="dropdownStyleLarge">
+                                        <ng-container *ngIf="selectedOptionLarge; else placeholderTextLarge">
+                                          <span class="selected-text selected-text-large">{{ selectedOptionLarge }}</span>
+                                        </ng-container>
+                                        <ng-template #placeholderTextLarge>
+                                          <span class="placeholder-text placeholder-text-large">
+                                            Role
+                                          </span>
+                                        </ng-template>
+                                        <ng-container *ngIf="isDropdownOpenLarge">
+                                          <img src="/assets/img/arrow-up.png" alt="Open Icon" class="dropdown-icon dropdown-icon-large" (click)="closeDropdownLarge()">
+                                        </ng-container>
+                                        <ng-container *ngIf="!isDropdownOpenLarge">
+                                          <img src="/assets/img/arrow-down.png" alt="Closed Icon" class="dropdown-icon dropdown-icon-large" (click)="openDropdownLarge()">
+                                        </ng-container>
+                                      </div>
+                                      <div class="general-options general-role-options general-options-large" *ngIf="isDropdownOpenLarge" >
+                                        <div class="general-option general-option-large" (click)="selectOptionLarge('Option 1')">Option 1</div>
+                                        <div class="general-option general-option-large" (click)="selectOptionLarge('Option 2')">Option 2</div>
+                                        <div class="general-option general-option-large" (click)="selectOptionLarge('Option 3')">Option 3</div>
+                                      </div>
+                                    </div> -->
+
+                                </div>
+                                <button class="disabled-button">Add new member</button>
+                            </div>
+
+                            <div class="member-list-div">
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture-guest.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Guest</p> <span class="forth-font-color">shako@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Beka@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Ilia@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                                <div class="member-list"><img class="member-list-profile-image" src="/assets/img/profile-picture.png" alt=""><div class="member-list-column"><p class="fifth-font-color">Admin</p> <span class="forth-font-color">Andria@pixcell.studio</span></div> <img class="cursor-ponter remove-member-icon" src="/assets/img/delete-icon.png" alt=""></div>
+                            </div>
+
+                        </form>
+                        <div class="general-submit-div">
+                            <button class="general-button" (click)="progressA(5)">Next Step</button>
+                            <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
+                        </div>
+                    </div>
+                </ng-container>
+    <!--        #fourth-bar-->
+    <!--        fifth-bar-->
+                <ng-container *ngIf="progressFifth">
+                    <div class="right-form-gap">
+                        <form class="general-right-form nickname-right-form" action="">
+                            <div class="general-right-form-txts">
+                                <h3>Connect your platforms</h3>
+                                <span class="tertiary-font-color general-right-form-txt connect-platform-right-form-txt">Have your recordings automatically uploaded to Companion AI for enhanced video summaries, transcriptions, and personalized annotations.</span>
+                            </div>
+                            <div class="connect-platform-div">
+                                <div class="connect-platform-box"><img src="/assets/img/zoom-icon.png" alt=""> <p class="tertiary-font-color">Connect Zoom Account</p> <img class="connect-platform-link-icon" src="/assets/img/connect-icon.png" alt=""></div>
+                                <div class="connect-platform-box"><img src="/assets/img/google-meet-icon.png" alt=""> <p class="tertiary-font-color">Google Account is Connected</p> <img src="/assets/img/connected-icon.png" alt=""></div>
+                            </div>
+                        </form>
+                        <div class="general-submit-div">
+                            <button class="general-button" (click)="progressA(6)">OK! Let’s jump in</button>
+                        </div>
+                    </div>
+                </ng-container>
+
+                <!--popup-->
+                <ng-container *ngIf="finalStep">
+                    <div class="verify-email-right-form-gap">
+                        <form class="general-right-form email-sent-form" action="">
+                            <div class="general-right-form-txts verify-email-right-form-txts">
+                                <svg width="184" height="164" viewBox="0 0 184 164" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.15"><path d="M182.904 81.5203C182.356 79.5277 182.127 77.3834 172.081 74.1485C170.993 65.6164 169.215 57.6378 166.295 54.3455C164.962 52.8449 158.898 44.6203 120.009 41.8856C116.93 32.6155 114.853 32.3818 112.923 31.8488C110.993 31.3158 103.907 30.9345 97.1111 30.8033V19.1265C100.166 17.3553 102.222 14.0425 102.222 10.25C102.222 4.5879 97.6468 0 92 0C86.3532 0 81.7778 4.5879 81.7778 10.25C81.7778 14.0425 83.8345 17.3512 86.8889 19.1265V30.8033C80.0932 30.9345 73.0071 31.3158 71.0772 31.8488C69.1472 32.3818 67.07 32.6155 63.9911 41.8856C25.1017 44.6203 19.0379 52.8408 17.7049 54.3455C14.7854 57.6378 13.0067 65.6123 11.9191 74.1485C1.86858 77.3875 1.64371 79.5318 1.09579 81.5203C0.425216 83.9557 0 94.5747 0 102.5C0 110.425 0.425216 121.044 1.09579 123.48C1.64371 125.472 1.87267 127.617 11.9191 130.852C13.0067 139.384 14.7854 147.362 17.7049 150.655C19.3078 152.463 27.7554 164 92 164C156.245 164 164.692 152.463 166.295 150.655C169.215 147.362 170.993 139.388 172.081 130.852C182.131 127.613 182.356 125.468 182.904 123.48C183.575 121.044 184 110.425 184 102.5C184 94.5747 183.575 83.9557 182.904 81.5203ZM147.723 134.603C146.521 135.808 140.183 143.5 92 143.5C43.8165 143.5 37.4787 135.808 36.2766 134.603C30.6299 128.941 30.6667 102.5 30.6667 102.5C30.6667 102.5 30.6299 76.0591 36.2766 70.397C37.4787 69.1916 43.8165 61.5 92 61.5C140.183 61.5 146.521 69.1916 147.723 70.397C153.37 76.0591 153.333 102.5 153.333 102.5C153.333 102.5 153.37 128.941 147.723 134.603Z" fill="#171717"/><path d="M61.3336 123C66.9791 123 71.5558 113.822 71.5558 102.5C71.5558 91.1782 66.9791 82 61.3336 82C55.688 82 51.1113 91.1782 51.1113 102.5C51.1113 113.822 55.688 123 61.3336 123Z" fill="#171717"/><path d="M122.667 123C128.312 123 132.889 113.822 132.889 102.5C132.889 91.1782 128.312 82 122.667 82C117.021 82 112.444 91.1782 112.444 102.5C112.444 113.822 117.021 123 122.667 123Z" fill="#171717"/><path d="M102.223 123C102.223 128.662 97.6473 133.25 92.0005 133.25C86.3538 133.25 81.7783 128.662 81.7783 123H102.223Z" fill="#171717"/></g>
+                                </svg>
+                                <h3 class="end-of-flow-text">End of Authorisation Flow</h3>
+                            </div>
+                        </form>
+
+                        <div class="general-submit-div">
+                            <button class="general-button" routerLink="../login">Back to Log in</button>
+                            <p class="tertiary-font-color general-button-bottom-txt cursor-ponter" (click)="returnToFirstStep()">Sign up Page</p>
+                        </div>
+                    </div>
+                </ng-container>
+                <!--#popup-->
+    <!--        #fifth-bar-->
+<!--        #progress-bar-section-->
+    </div>
+</div>

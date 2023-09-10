@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="title" *ngIf="title">
+    </div>
+    
+    <owl-carousel-o class="popular-games-carousel" [options]="customOptions">
+        <ng-container
+            class="games-carousel-container"
+            *ngFor="let slide of slidesStore"
+        >
+            <ng-template carouselSlide [id]="slide.id">
+            <div class="carousel-content">
+            
+              <div class="img">
+                <img
+                  class="carousel-img"
+                  [src]="slide.src"
+                  [alt]="slide.alt"
+                  [title]="slide.title"
+                />
+              </div>
+            </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>
