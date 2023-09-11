@@ -10,13 +10,14 @@
 
 body {
     width: 100%;
+    max-width: 100%;
     min-height: 100%;
     font-family: 'Poppins', sans-serif;
 
 }
 
 html{
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth; აღარ დაუწერო ალიკ თორე დაგბრიდავ !!!!! 
     min-height: 100vh;
 }
 
@@ -544,7 +545,7 @@ input[type=password], select {
         gap: 18px;
         align-items: flex-start;
         text-align: start;
-        width: 494px;
+        width: 455px !important;
     }
 
     .create-new-account-input-div {
@@ -640,6 +641,32 @@ input[type=password], select {
     .general-left-form-txt {
         font-size: 34px;
     }
+
+    .create-new-acc-checkbox {
+       justify-content: space-around;
+    }
+
+    .create-new-account-input-div{
+        align-items: center !important;
+    }
+
+    .create-new-account-txt {
+        font-size: 13px;
+        font-weight: 400;
+        padding-left: 5px;
+        width: 402px;
+        text-align: left;
+    }
+
+    .create-new-acc-checkbox{
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        text-align: start;
+        margin-left: 2px;
+        width: 401px !important;
+        width: 494px;
+     }
 }
 
 
@@ -664,6 +691,11 @@ input[type=password], select {
     .general-input-div {
         align-items: center;
     }
+
+    .create-new-account-txt[_ngcontent-ng-c184098839] {
+        width: 100%;;
+    }
+    
 }
 
 @media only screen and (max-width: 680px) {
@@ -693,7 +725,15 @@ input[type=password], select {
     h3 {
         font-size: 30px !important;
     }
-    
+        
+    .create-new-acc-checkbox {
+        width: 100%;
+    }
+
+    .remember-checkbox {
+        
+    }
+
     .general-google-btn {
         width: 320px;
     }
@@ -720,6 +760,21 @@ input[type=password], select {
     .create-new-account-input-div {
         display: flex;
         flex-direction: column;
+    }
+
+
+    .create-new-account-txt {
+        width: 320px !important;
+    } 
+
+    .general-save-checkbox-div {
+        width: 220px !important;
+        grid-area: 2px !important;
+        font-size: 12px;
+    }
+
+    .tertiary-font-color {
+        width: 320px !important;
     }
 }
 
