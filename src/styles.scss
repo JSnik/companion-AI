@@ -94,11 +94,6 @@ html{
 .general-input-container {
     position: relative;
   }
-
-#line {
-    width: 392px !important;
-    max-width: 100%;
-}  
   .general-input-icon {
     position: absolute;
     top: 50%;
@@ -106,54 +101,47 @@ html{
     right: 16px;
     transform: translateY(-50%);
   }
-::placeholder{
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 23.5px;
-    letter-spacing: 0em;
-    color: rgba(126, 133, 148, 1);
-}
-.general-form-group{
+.general-input-group{
     position: relative;
 }
 .general-input-placeholder-text{
     position: absolute;
-    top: 20px;
+    top: 18px;
     left: 16px;
     font-size: 15px;
     font-weight: 500;
     line-height: 23.5px;
     letter-spacing: 0em;
     color: rgba(126, 133, 148, 1);
-    margin-bottom: 10px;
+    margin-bottom:10px;
     pointer-events: none;
     transition: 0.3s ease-out;
+    z-index: 1;
 }
 .general-input:focus + label,
 .general-input:not(:placeholder-shown) + label {
-  top: 5px;
-  left: 10.5px;
-  border: none;
-  font-size: 14px;
-  color: rgba(126, 133, 148, 1);
-  padding: 0 5px;
-}
-.form-icons{
-    width: 24px;
-    height: 24px;
+    top: 5px;
+    left: 16px;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    color: rgba(126, 133, 148, 1);
 }
 .general-checkbox{
     cursor: pointer;
-    accent-color: rgba(67, 76, 230, 1);
+    accent-color: rgba(41, 84, 236, 1);
     width: 18px;
     max-width: 100%;
     height: 18px;
     border-radius: 4px;
-    border: 1px solid #DADCE0;
-    background: #F6F7F9;
-    // appearance: none;
+    border: 1px solid rgb(218, 220, 224);
+    background: rgb(246, 247, 249);
+    appearance: none;
 }
-
+.general-checkbox:checked{
+    appearance: auto;
+}
 .general-button{
     border-radius: 8px;
     background-color: rgba(67, 76, 230, 1);
@@ -582,6 +570,10 @@ input[type=password], select {
     .general-input {
         width: 440px;
     } 
+    .disabled-button{
+        width: 440px !important;
+        padding: 10px 155px !important;
+    }
 
     .general-right-form-txt {
         width: 440px;
@@ -621,7 +613,13 @@ input[type=password], select {
         width: 400px;
         max-width: 100%;
     } 
-
+    .disabled-button{
+        width: 400px !important;
+        padding: 10px 121px !important;
+    }
+    .member-list{
+        width: 400px !important;
+    }
     .general-left {
         width: 400px;
         max-width: 100%;
@@ -674,7 +672,25 @@ input[type=password], select {
     .general-left {
         display: none;
     }
+    .invite-input{
+        width: 440px !important;
+    }
+    .option-div{
+        width: 366px !important;
+    }
+    .option{
+        padding: 12px 50px !important;
 
+        span{
+            font-size: 13px !important;
+        }
+    }
+    .general-progress-border-div{
+        width: 390px;
+    }
+    .member-list{
+        width: 440px !important;
+    }
     .general-submit-div {
         width: 600px;
         align-items: center;
@@ -707,9 +723,11 @@ input[type=password], select {
     .general-input {
         width: 420px;
     }
+    .disabled-button{
+        width: 420px;
+    }
     .create-new-account-txt{
         width: 366px;
-        text-align: start;
     }
 }
 
@@ -720,7 +738,9 @@ input[type=password], select {
     h3 {
         font-size: 30px !important;
     }
-    
+    .general-progress-border-div{
+        width: 300px;
+    }
     .general-google-btn {
         width: 320px;
     }

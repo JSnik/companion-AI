@@ -43,27 +43,37 @@
                 <p class="fifth-font-color">or</p>
                 <div class="general-input-div">
                     <div class="create-new-account-input-div">
-                        <input class="general-input" type="email" placeholder="Email Address" formControlName="email"
-                               [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched">
+                         <div class="general-input-group">
+                            <input class="general-input" type="email" placeholder=" " formControlName="email"
+                            [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched">
+                            <label class="general-input-placeholder-text" for="">Email Address</label>
+                         </div>
                         <p class="tertiary-font-color create-new-account-txt"> &#9679; Using your work email makes it easier to connect with your team</p>
                     </div>
-                    <div class="general-input-container">
-                        <div class="create-new-account-input-div">
-                            <input class="general-input" type="password" placeholder="Password" formControlName="password"
-                                   [class.invalid-input]="form.get('password')!.invalid && form.get('password')!.touched">
+                        <div>
+                            <div class="general-input-container">
+                                <div class="create-new-account-input-div">
+                                        <div class="general-input-group">
+                                            <input class="general-input" type="password" placeholder=" " formControlName="password"
+                                            [class.invalid-input]="form.get('password')!.invalid && form.get('password')!.touched">
+                                            <label class="general-input-placeholder-text" for="">Password</label>
+                                        </div>
+                                </div>
+                                <span class="general-input-icon">
+                                    <img src="/assets/img/eye.png" alt="">
+                                </span>
+                            </div>
                             <p class="sixth-font-color general-error-txt"> &#9679; Password must contain min 1 capital letter</p>
                         </div>
-                        <span class="general-input-icon">
-                 <img src="/assets/img/eye.png" alt="">
-               </span>
-
-                    </div>
                     <div class="general-input-container">
-                        <input class="general-input" type="password" placeholder="Confirm Password" formControlName="confirmPassword"
-                               [class.invalid-input]="form.get('confirmPassword')!.invalid && form.get('confirmPassword')!.touched">
+                        <div class="general-input-group">
+                            <input class="general-input" type="password" placeholder=" " formControlName="confirmPassword"
+                            [class.invalid-input]="form.get('confirmPassword')!.invalid && form.get('confirmPassword')!.touched">
+                            <label class="general-input-placeholder-text" for="">Confirm Password</label>
+                        </div>
                         <span class="general-input-icon">
-                <img src="/assets/img/eye.png" alt="">
-              </span>
+                            <img src="/assets/img/eye.png" alt="">
+                        </span>
                     </div>
 
                     <div class="general-save-checkbox-div-main">
@@ -119,7 +129,10 @@
                                 <h3>It’s nice to meet you!</h3>
                                 <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
                             </div>
-                            <input class="general-input" type="text" placeholder="What woult yo like to be called" formControlName="name">
+                             <div class="general-input-group">
+                                <input class="general-input" type="text" placeholder=" " formControlName="name">
+                                <label class="general-input-placeholder-text" for="">What woult yo like to be called</label>
+                             </div>
                         </form>
                         <div class="general-submit-div">
                             <button class="general-button" (click)="progressA(2)">Next Step</button>
@@ -174,9 +187,9 @@
                                         {{ selectedOption }}
                                     </ng-container>
                                     <ng-template #placeholderText>
-              <span class="placeholder-text">
-                What’s the one main activity you want to use this app?
-              </span>
+                                        <span class="placeholder-text">
+                                            What’s the one main activity you want to use this app?
+                                        </span>
                                     </ng-template>
                                     <ng-container *ngIf="isDropdownOpen">
                                         <img src="/assets/img/arrow-up.png" alt="Open Icon" class="dropdown-icon general-select-icon">
@@ -209,11 +222,13 @@
                                 <h3>Create your workspace</h3>
                                 <span class="tertiary-font-color general-right-form-txt">Effortlessly share your meeting recordings and notes and retire the phrase “can i get a copy of that recording”.</span>
                             </div>
-                            <input class="general-input" type="text" placeholder="Workspace name">
+                                <div class="general-input-group">
+                                    <input class="general-input" type="text" placeholder=" ">
+                                    <label class="general-input-placeholder-text" for="">Workspace name</label>
+                                </div>
                         </form>
                         <div class="general-submit-div">
                             <button class="general-button" (click)="progressA(4)">Next Step</button>
-                            <p class="tertiary-font-color general-button-bottom-txt cursor-ponter">Skip for now</p>
                         </div>
                     </div>
                 </ng-container>
@@ -229,7 +244,10 @@
 
                             <div class="input-button-gap">
                                 <div class="input-container">
-                                    <input class="general-input" type="text" placeholder="Add member’s email">
+                                    <div class="general-input-group">
+                                        <input class="general-input invite-input" type="text" placeholder=" ">
+                                        <label class="general-input-placeholder-text" for="">Add member’s email</label>
+                                    </div>
 
                                     <!-- <div class="custom-dropdown general-role-select custom-dropdown-large" (click)="toggleDropdownLarge()">
                                       <div class="selected-option selected-role-option selected-option-large" [style]="dropdownStyleLarge">

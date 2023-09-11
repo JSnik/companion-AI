@@ -42,14 +42,17 @@
                 </a>
                 <p class="fifth-font-color">or</p>
                 <div class="general-input-div">
-                   <div class="general-form-group">
+                   <div class="general-input-group">
                     <input class="general-input" type="email" placeholder=" " formControlName="email"
                     [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched">
                     <label class="general-input-placeholder-text" for="">Email Address</label>
                    </div>
                     <div class="general-input-container">
-                        <input class="general-input" type="password" placeholder="Password" formControlName="password"
-                               [class.invalid-input]="form.get('password')!.invalid && form.get('email')!.touched">
+                        <div class="general-input-group">
+                        <input class="general-input" type="password" placeholder=" " formControlName="password"
+                        [class.invalid-input]="form.get('password')!.invalid && form.get('email')!.touched">
+                        <label class="general-input-placeholder-text" for="">Password</label>
+                        </div>
                         <span class="general-input-icon">
                  <img src="/assets/img/eye.png" alt="">
                </span>
