@@ -1,6 +1,7 @@
 <div class="general-div">
     <div class="general-left primary-bg-color">
-        <div class="general-bg-image"></div>
+     <div class="general-bg-image"></div>
+      <div class="general-left-gap">
         <a href="">
             <div class="general-go-back-div">
                 <img src="/assets/img/arrow-left.png" alt="">
@@ -22,6 +23,7 @@
                 <li class="general-offer-list-li"> <img src="/assets/img/document-text.png" alt=""> Use a common document for the group, work together around the project</li>
             </ul>
         </form>
+      </div>
 </div>
 
 
@@ -40,8 +42,11 @@
                 </a>
                 <p class="fifth-font-color">or</p>
                 <div class="general-input-div">
-                    <input class="general-input" type="email" placeholder="Email Address" formControlName="email"
+                   <div class="general-form-group">
+                    <input class="general-input" type="email" placeholder=" " formControlName="email"
                     [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched">
+                    <label class="general-input-placeholder-text" for="">Email Address</label>
+                   </div>
                     <div class="general-input-container">
                         <input class="general-input" type="password" placeholder="Password" formControlName="password"
                                [class.invalid-input]="form.get('password')!.invalid && form.get('email')!.touched">

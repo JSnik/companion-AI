@@ -82,11 +82,11 @@ html{
     width: 520px;
     max-width: 100% !important;
     height: 58px;
-    outline-color: rgba(67, 76, 230, 1);
+    outline: none;
     border: rgba(246, 247, 249, 1);
     background-color: rgba(246, 247, 249, 1);
-
 }
+
 .invalid-input {
     background: rgba(234, 67, 53, 0.15);
     color: rgba(234, 67, 53, 1);
@@ -113,6 +113,31 @@ html{
     letter-spacing: 0em;
     color: rgba(126, 133, 148, 1);
 }
+.general-form-group{
+    position: relative;
+}
+.general-input-placeholder-text{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23.5px;
+    letter-spacing: 0em;
+    color: rgba(126, 133, 148, 1);
+    margin-bottom: 10px;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+}
+.general-input:focus + label,
+.general-input:not(:placeholder-shown) + label {
+  top: 5px;
+  left: 10.5px;
+  border: none;
+  font-size: 14px;
+  color: rgba(126, 133, 148, 1);
+  padding: 0 5px;
+}
 .form-icons{
     width: 24px;
     height: 24px;
@@ -129,10 +154,6 @@ html{
     // appearance: none;
 }
 
-.general-checkbox-crossed:checked + label {
-    color: rgb(77, 83, 101) !important;
-    text-decoration: line-through;
-  }
 .general-button{
     border-radius: 8px;
     background-color: rgba(67, 76, 230, 1);
@@ -280,12 +301,18 @@ input[type=password], select {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 192px;
     position: relative;
     width: 520px;
     max-width: 100% !important;
     height: 100vh;
+}
+.general-left-gap{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
     padding: 30px;
+    height: 100%;
 }
 .general-left-form{
     background-color: rgba(0, 0, 0, 0.26);
@@ -353,8 +380,8 @@ input[type=password], select {
     border-radius: 30px;
     background: rgba(23, 23, 23, 0.15);
     backdrop-filter: blur(8px);
-    position: absolute;
-    left: 30px;
+    // position: absolute;
+    // left: 30px;
     transition: all 0.3s;
 }
 
