@@ -502,10 +502,32 @@
 /// end of auth flow styles ///
 
 
+
 .end-of-flow-text{
   opacity: .15;
 }
 .end-of-auth-flow-right{
   height: 85vh;
   justify-content: flex-end;
+}
+
+.after-responsive {
+  background: var(--Primary-Transparent, rgba(67, 76, 230, 0.15));
+  color: #434CE6;
+}
+
+.flow-img-border {
+  width: 136px;
+  height: 136px;
+  border-radius: 222px;
+  background: var(--light-light-1, #FFF);
+  border: 2px solid var(--Primary, #434CE6);
+
+}
+
+.flow-img {
+    border-radius: 222px;
+    width: 128px;
+    height: 128px;
+    flex-shrink: 0;
 }

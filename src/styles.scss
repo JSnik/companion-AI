@@ -550,6 +550,9 @@ input[type=password], select {
     display: flex;
 }
 
+.person-inf {
+    display: none;
+}
 
 // .general-right-form-txts {
 
@@ -756,6 +759,16 @@ input[type=password], select {
         width: 100%;;
     }
 
+    .ends {
+        display: none;
+    }
+
+    .person-inf {
+        display: flex;
+        flex-direction: column;
+        align-content: center !important;
+        gap: 10px;
+    }
 }
 
 @media only screen and (max-width: 680px) {
