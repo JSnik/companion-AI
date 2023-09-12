@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     HeaderComponent,
     loaderComponent,
-    SliderComponent
+    SliderComponent,
   ],
   imports: [
     CommonModule,

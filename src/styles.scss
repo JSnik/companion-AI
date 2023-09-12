@@ -7,7 +7,10 @@
     list-style: none;
     text-decoration: none;
 }
-
+.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe {
+    width: 419px;
+    height: 46px;
+}
 body {
     width: 100%;
     max-width: 100%;
@@ -311,8 +314,12 @@ input[type=password], select {
     gap: 32px;
     display: flex;
     flex-direction: column;
-    width: 456px;
+    width: 100%;
     max-width: 100% !important;
+}
+.right-form-gap {
+    height: 100%;
+    padding-bottom: 20px;
 }
 .general-right-form{
     gap: 32px;
@@ -351,7 +358,7 @@ input[type=password], select {
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 32px;
+    gap: 10px;
 }
 
 .general-input-div{
@@ -419,8 +426,9 @@ input[type=password], select {
     width: 520px;
     max-width: 100% !important;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 8px;
+    height: 70px;
     margin-bottom: 70px;
 }
 

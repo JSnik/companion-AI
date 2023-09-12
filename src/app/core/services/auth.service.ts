@@ -29,4 +29,27 @@ export class AuthService {
     }
     return this.http.post<any>(url, obj);
   }
-}
+
+  confirmEmail(token: any, email: string, password: string): Observable<any> {
+    const url = this.baseUrl + `users/confirmEmail/${token}`;
+    const obj = {
+      email: email,
+      password: password
+    }
+    return this.http.patch<any>(url, obj)
+  }
+
+  resetPass(email : any): Observable<any> {
+    const url = this.baseUrl + `users/forgotPassword`;
+    return this.http.post<any>(url, {email: email})
+  }
+
+  resetPassword(token: string, password: string, passwordConfirm: string): Observable<any> {
+    const url = this.baseUrl + `users/resetPassword/${token}`;
+    const obj = {
+      password: password,
+      passwordConfirm: passwordConfirm
+    }
+    return this.http.patch<any>(url, obj)
+  }
+ }

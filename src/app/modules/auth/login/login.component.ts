@@ -1,8 +1,9 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from "../../../core/services/auth.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Subject, takeUntil} from "rxjs";
 import {Router} from "@angular/router";
+import {SocialAuthService} from "@abacritt/angularx-social-login";
 
 @Component({
   selector: 'app-login',
@@ -12,12 +13,18 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit, OnDestroy{
   destroy$: Subject<boolean> = new Subject<boolean>();
   form: FormGroup;
-  constructor(private _auth: AuthService, private fb: FormBuilder, private router: Router) {
+  isPasswordVisible: boolean = false;
+  type: string = 'password';
+
+
+  constructor( private _auth: AuthService,private connection: SocialAuthService, private fb: FormBuilder, private router: Router) {
   }
+
 
   ngOnInit() {
     this.initializeForm();
   }
+
 
   initializeForm(): void {
     this.form = this.fb.group({
@@ -42,5 +49,10 @@ export class LoginComponent implements OnInit, OnDestroy{
   ngOnDestroy() {
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
+  }
+
+  showHide() {
+    this.isPasswordVisible = !this.isPasswordVisible;
+    this.isPasswordVisible ? this.type = 'text' : this.type = 'password';
   }
 }

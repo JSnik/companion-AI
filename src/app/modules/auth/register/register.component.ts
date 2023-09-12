@@ -12,6 +12,7 @@ import {containsUppercase} from "../auth.regex";
 export class RegisterComponent implements OnInit, OnDestroy{
     destroy$: Subject<boolean> = new Subject<boolean>();
     form: FormGroup;
+    checked: boolean = false;
 
     createFirst: boolean = true;
     createSecond: boolean = false
@@ -33,12 +34,36 @@ export class RegisterComponent implements OnInit, OnDestroy{
     selectedOption: string | null = null;
     dropdownStyle: any = {};
 
+    isPasswordVisible: boolean = false;
+    isPasswordVisibleSecond: boolean = false;
+    type: string = 'password';
+    typeSecond: string = 'password';
     constructor(private fb: FormBuilder, private _auth: AuthService) {
     }
 
+    showHide(number: any) {
+            if (number === 1) {
+                this.isPasswordVisible = !this.isPasswordVisible;
+                this.isPasswordVisible ? this.type = 'text' : this.type = 'password';
+            } else {
+                this.isPasswordVisibleSecond = !this.isPasswordVisibleSecond;
+                this.isPasswordVisibleSecond ? this.typeSecond = 'text' : this.typeSecond = 'password';
+            }
+    }
     createAcc() {
         this.createFirst = false;
         this.createSecond = true;
+        const email = this.form.get('email')!.value;
+        const password = this.form.get('password')!.value;
+        const confirmPassword = this.form.get('confirmPassword')!.value;
+        const name = this.form.get('name')!.value;
+        localStorage.setItem('user', JSON.stringify({email: email, password: password}))
+        this._auth.register('name', email, password, confirmPassword)
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((item: any) => {
+
+            })
+
     }
 
 
@@ -62,12 +87,12 @@ export class RegisterComponent implements OnInit, OnDestroy{
     progressA(number: number) {
         if (number === 1) {
             this.createFirst = false;
-            this.createSecond = false;
-            this.progressFirst = true;
+            this.createSecond = true;
+            this.progressFirst = false;
             this.progressSecond = false;
             this.progressThird = false;
             // for style
-            this.styleBarFirst = true;
+            this.styleBarFirst = false;
             this.styleBarSecond = false;
             this.styleBarThird = false;
             const email = this.form.get('email')!.value;
@@ -79,6 +104,7 @@ export class RegisterComponent implements OnInit, OnDestroy{
                 .subscribe((item: any) => {
 
                 })
+
         } else if (number === 2) {
             this.createFirst = false;
             this.createSecond = false;
@@ -145,14 +171,28 @@ export class RegisterComponent implements OnInit, OnDestroy{
     }
 
     ngOnInit() {
-        this.initializeForm()
+        this.initializeForm();
+        if (localStorage.getItem('verify')) {
+            this.createFirst = false;
+            this.createSecond = false;
+            this.progressFirst = true;
+            this.progressSecond = false;
+            this.progressThird = false;
+            // for style
+            this.styleBarFirst = true;
+            this.styleBarSecond = false;
+            this.styleBarThird = false;
+        }
+        setTimeout(() => {
+            localStorage.removeItem('verify')
+        }, 1500)
     }
 
     initializeForm(): void {
         this.form = this.fb.group({
             email: ['', [Validators.required, Validators.email]],
-            password: ['', [Validators.required, containsUppercase()]],
-            confirmPassword: ['', [Validators.required, containsUppercase()]],
+            password: ['', [Validators.required, containsUppercase(), Validators.minLength(8), Validators.maxLength(64)]],
+            confirmPassword: ['', [Validators.required, containsUppercase(), Validators.minLength(8), Validators.maxLength(64)]],
             name: ['', Validators.required]
         })
     }
@@ -166,5 +206,10 @@ export class RegisterComponent implements OnInit, OnDestroy{
     ngOnDestroy() {
         this.destroy$.next(true);
         this.destroy$.unsubscribe();
+    }
+
+
+    check() {
+        this.checked = !this.checked
     }
 }

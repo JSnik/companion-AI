@@ -1,6 +1,7 @@
 import { Component, DoCheck, OnChanges, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationStart,NavigationEnd, Router } from '@angular/router';
 import * as AOS from 'aos'
+import {SocialAuthService} from "@abacritt/angularx-social-login";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,13 +10,22 @@ import * as AOS from 'aos'
 export class AppComponent implements OnInit {
   public isGame: boolean = false;
   public loader: boolean = true;
-  constructor(private route: ActivatedRoute, private router: Router) {
+  public user: any;
+  public loggedIn: any;
+  constructor(private authService: SocialAuthService, private route: ActivatedRoute, private router: Router) {
 
   }
+
   ngOnInit(): void {
     this.checkRoute();
     this.loaderNone();
     AOS.init();
+      this.authService.authState.subscribe((user) => {
+        this.user = user;
+        this.loggedIn = (user != null);
+        console.log(11111)
+        this.router.navigate(['/home']);
+      });
   }
 
   checkRoute(): void {

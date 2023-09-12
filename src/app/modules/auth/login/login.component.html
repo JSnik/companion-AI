@@ -34,27 +34,30 @@
                     <h3>Hello again!</h3>
                     <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
                 </div>
-                <a class="forth-font-color" href="">
-                    <div class="general-google-btn">
-                        <img class="general-google-icon" src="/assets/img/google-icon.png" alt="">
-                        <h5>Sign in with Google</h5>
-                    </div>
+                <a class="forth-font-color" style="position: relative;" >
+<!--                    <div class="general-google-btn cursor-ponter">-->
+<!--                        <img class="general-google-icon" src="/assets/img/google-icon.png" alt="" (click)="hah()">-->
+<!--                        <h5>Sign in with Google</h5>-->
+<!--                    </div>-->
+                    <asl-google-signin-button type="standard" size="large" text="signin_with" id="myButton"></asl-google-signin-button>
                 </a>
                 <p class="fifth-font-color">or</p>
                 <div class="general-input-div">
                    <div class="general-input-group">
                     <input class="general-input" type="email" placeholder=" " formControlName="email"
-                    [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched">
+                    [class.invalid-input]="form.get('email')!.invalid && form.get('email')!.touched && form.get('email')!.value.length"
+                           >
                     <label class="general-input-placeholder-text" for="">Email Address</label>
                    </div>
                     <div class="general-input-container">
                         <div class="general-input-group">
-                        <input class="general-input" type="password" placeholder=" " formControlName="password"
-                        [class.invalid-input]="form.get('password')!.invalid && form.get('email')!.touched">
-                        <label class="general-input-placeholder-text" for="">Password</label>
+                        <input class="general-input" [type]="type" placeholder=" " formControlName="password"
+                        [class.invalid-input]="form.get('password')!.invalid && form.get('email')!.touched && form.get('password')!.value.length"
+                               >
+                        <label class="general-input-placeholder-text" for="" > Password</label>
                         </div>
                         <span class="general-input-icon">
-                 <img src="/assets/img/eye.png" alt="">
+                 <img src="/assets/img/eye.png" alt="" (click)="showHide()">
                </span>
                     </div>
 

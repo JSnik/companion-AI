@@ -6,6 +6,10 @@ import {RouterModule, Routes} from "@angular/router";
 import {MainComponent} from "../main/main.component";
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {GoogleSigninButtonModule} from "@abacritt/angularx-social-login";
+import { SuccessComponent } from './success/success.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import {ShowHidePasswordDirective} from "../shared/click.directive";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -14,11 +18,13 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent],
+  declarations: [ShowHidePasswordDirective, LoginComponent, RegisterComponent, ForgotPasswordComponent, SuccessComponent, ResetPasswordComponent, ],
     imports: [
         CommonModule,
         RouterModule.forChild(routes),
         ReactiveFormsModule,
+        GoogleSigninButtonModule,
+
     ],
 
 })
