@@ -119,7 +119,7 @@
     <!--        first-bar-->
                 <ng-container *ngIf="progressFirst">
                     <div class="right-form-gap">
-                        <form class="general-right-form nickname-right-form" action="">
+                        <form class="general-right-form nickname-right-form" [formGroup]="nameF">
                             <div class="general-right-form-txts">
                                 <h3>It’s nice to meet you!</h3>
                                 <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
@@ -240,8 +240,13 @@
                             <div class="input-button-gap">
                                 <div class="input-container">
                                     <div class="general-input-group">
-                                        <input class="general-input invite-input" type="text" placeholder=" ">
-                                        <label class="general-input-placeholder-text" for="">Add member’s email</label>
+                                        <form [formGroup]="memberF">
+                                            <input class="general-input invite-input" type="text"
+                                            formControlName="member"
+                                            placeholder="Add member’s email"
+                                            [class.invalid-input]="form.get('member')?.invalid && form.get('member')?.touched && form.get('member')!.value.length"
+                                            >
+                                        </form>
                                     </div>
 
                                     <!-- <div class="custom-dropdown general-role-select custom-dropdown-large" (click)="toggleDropdownLarge()">
@@ -269,7 +274,7 @@
                                     </div> -->
 
                                 </div>
-                                <button class="disabled-button">Add new member</button>
+                                <button class="disabled-button" [class.member-btn-active]="form.get('member')?.value">Add new member</button>
                             </div>
 
                             <div class="member-list-div">
@@ -297,7 +302,10 @@
                             </div>
                             <div class="connect-platform-div">
                                 <div class="connect-platform-box"><img src="/assets/img/zoom-icon.png" alt=""> <p class="tertiary-font-color">Connect Zoom Account</p> <img class="connect-platform-link-icon" src="/assets/img/connect-icon.png" alt=""></div>
-                                <div class="connect-platform-box"><img src="/assets/img/google-meet-icon.png" alt=""> <p class="tertiary-font-color">Google Account is Connected</p> <img src="/assets/img/connected-icon.png" alt=""></div>
+                                <div class="connect-platform-box"><img src="/assets/img/google-meet-icon.png" alt=""> <p class="tertiary-font-color">Connect Google Account</p>
+<!--                                    <img src="/assets/img/connected-icon.png" alt="">-->
+                                    <img class="connect-platform-link-icon" src="/assets/img/connect-icon.png" alt="">
+                                </div>
                             </div>
                         </form>
                         <div class="general-submit-div">

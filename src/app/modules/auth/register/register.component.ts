@@ -38,6 +38,9 @@ export class RegisterComponent implements OnInit, OnDestroy{
     isPasswordVisibleSecond: boolean = false;
     type: string = 'password';
     typeSecond: string = 'password';
+
+    memberF: FormGroup;
+    nameF: FormGroup;
     constructor(private fb: FormBuilder, private _auth: AuthService) {
     }
 
@@ -172,6 +175,9 @@ export class RegisterComponent implements OnInit, OnDestroy{
 
     ngOnInit() {
         this.initializeForm();
+        this.createFirst = false;
+        this.createSecond = false;
+        this.progressFirst = true;
         if (localStorage.getItem('verify')) {
             this.createFirst = false;
             this.createSecond = false;
@@ -195,7 +201,16 @@ export class RegisterComponent implements OnInit, OnDestroy{
             confirmPassword: ['', [Validators.required, containsUppercase(), Validators.minLength(8), Validators.maxLength(64)]],
             name: ['', Validators.required]
         })
+
+        this.memberF = this.fb.group({
+            member: ['', [Validators.required, Validators.email]]
+        })
+
+        this.nameF = this.fb.group({
+            name: ['', [Validators.required]]
+        })
     }
+
 
     returnToFirstStep() {
         this.createFirst = true;
