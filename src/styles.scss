@@ -547,10 +547,21 @@ input[type=password], select {
 
 // }
 
+
+
+@media only screen and (max-width: 1145px) {
+    .general-progress-border-div {
+        width: 480px;
+    }
+}
+
+
 @media only screen and (max-width: 1110px) {
     .general-google-btn {
         width: 440px;
     }
+
+
 
 
     .create-new-acc-checkbox {
@@ -759,6 +770,33 @@ input[type=password], select {
     .create-new-account-txt{
         width: 366px;
     }
+
+    .general-select {
+        width: 375px;
+        max-width: 100% !important;
+        height: 48px;
+        padding: 8px 16px;
+        background-color: rgb(246, 247, 249);
+        border-radius: 8px;
+        color: rgb(23, 23, 23) !important;
+        font-weight: 500;
+        font-size: 9px;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .placeholder-text {
+        color: rgb(126, 133, 148);
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .connect-platform-box {
+        width: 445px !important;
+    }
 }
 
 
@@ -776,8 +814,32 @@ input[type=password], select {
         width: 100%;
     }
 
-    .remember-checkbox {
+    .disabled-button {
+        font-size: 11px;
+        width: 308px !important;
+        padding: 0px !important;
+    }
 
+
+    .connect-platform-box {
+        width: 320px !important;
+    }
+// აექ
+ 
+
+    
+
+    .member-list-div {
+        align-items: center;
+    }
+
+    .member-list {
+        width: 320px !important;
+    }
+
+
+    .invite-input {
+        width: 320px !important;
     }
 
     .general-google-btn {
@@ -788,7 +850,7 @@ input[type=password], select {
         width: 300px;
     }
     .general-input {
-        width: 320px;
+        width: 320px !important;
     }
 
     .right-form-gap {
@@ -840,7 +902,54 @@ input[type=password], select {
     }
 
 
+    .connect-platform-box {
+        width: 300px !important;
+    }
+
+    .general-select {
+        width: 350px !important;
+        max-width: 100% !important;
+        height: 48px;
+        padding: 8px 16px;
+        background-color: rgb(246, 247, 249);
+        border-radius: 8px;
+        color: rgb(23, 23, 23) !important;
+        font-weight: 500;
+        font-size: 9px;
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .placeholder-text {
+        color: rgb(126, 133, 148);
+        font-size: 10px !important;
+        font-weight: 500;
+    }
+
+
+    .member-list {
+        width: 280px !important;
+    }
+
+    .invite-input {
+        width: 280px !important;
+    }
+
+    .disabled-button {
+        width: 280px !important;
+    }
+
     
+}
+
+@media only screen and (max-width: 400px)  {
+    .option-div {
+        width: 335px !important;
+        gap: 12px;
+    }
 }
 
 @media only screen and (max-width: 390px) {
@@ -855,6 +964,18 @@ input[type=password], select {
         font-size: 25px !important;
     }
     
+    .option-div {
+        width: 280px !important;
+        gap: 10px;
+    }
+
+    .general-select {
+        width: 280px !important;
+    }
+    .placeholder-text {
+        font-size: 8.5px !important;
+    }
+
     .general-google-btn {
         width: 300px;
     }
@@ -879,4 +1000,15 @@ input[type=password], select {
         .password-reset-right-form-gap {
         gap: 330px !important;
     }
+
+    
 }
+
+
+@media only screen and (max-width: 325px) {
+    .general-right {
+        margin-left: 34px;
+    }
+}
+
+
