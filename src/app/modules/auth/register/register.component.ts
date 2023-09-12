@@ -175,9 +175,7 @@ export class RegisterComponent implements OnInit, OnDestroy{
 
     ngOnInit() {
         this.initializeForm();
-        this.createFirst = false;
-        this.createSecond = false;
-        this.progressFirst = true;
+
         if (localStorage.getItem('verify')) {
             this.createFirst = false;
             this.createSecond = false;
