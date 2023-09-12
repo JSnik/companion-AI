@@ -488,7 +488,6 @@ input[type=password], select {
 .general-select-div {
     position: relative;
     display: inline-block;
-    margin-right: 10px;
 }
 
 
@@ -534,8 +533,7 @@ input[type=password], select {
     border: 1px solid rgb(218, 220, 224);
     gap: 10px;
     border-top: 0;
-    border-radius: 0;
-   
+    border-radius: 0; 
 }
 .selected-role-option{
     gap: 70px;
@@ -545,11 +543,9 @@ input[type=password], select {
 .person-inf {
     display: none;
 }
-
-// .general-right-form-txts {
-
-// }
-
+.after-responsive{
+    display: none;
+}
 
 
 @media only screen and (max-width: 1145px) {
@@ -563,18 +559,16 @@ input[type=password], select {
     .general-google-btn {
         width: 440px;
     }
-
-
-
-
     .create-new-acc-checkbox {
         display: flex;
         gap: 18px;
         align-items: flex-start;
         text-align: start;
-        width: 455px !important;
+        width: 100% !important;
     }
-
+    .create-acc-checkbox-text{
+        width: 400px !important;
+    }
     .create-new-account-input-div {
         display: flex;
         flex-direction: column;
@@ -678,13 +672,8 @@ input[type=password], select {
     .general-left-form-txt {
         font-size: 34px;
     }
-
-    .create-new-acc-checkbox {
-       justify-content: space-around;
-    }
-
     .create-new-account-input-div{
-        align-items: center !important;
+        align-items: flex-start !important;
     }
 
     .create-new-account-txt {
@@ -695,15 +684,9 @@ input[type=password], select {
         text-align: left;
     }
 
-    .create-new-acc-checkbox{
-        display: flex;
-        gap: 8px;
-        align-items: flex-start;
-        text-align: start;
-        margin-left: 2px;
-        width: 401px !important;
-        width: 494px;
-     }
+    .create-acc-checkbox-text{
+        width: 374px !important;
+    }
 }
 
 
@@ -711,15 +694,13 @@ input[type=password], select {
     .general-left {
         display: none;
     }
+    .after-responsive{
+        display: block;
+    }
     .invite-input{
         width: 440px !important;
     }
-    .option-div{
-        width: 366px !important;
-    }
     .option{
-        padding: 12px 50px !important;
-
         span{
             font-size: 13px !important;
         }
@@ -758,18 +739,28 @@ input[type=password], select {
     .person-inf {
         display: flex;
         flex-direction: column;
-        align-content: center !important;
+        align-items: center;
         gap: 10px;
+    }
+    .create-acc-checkbox-text {
+        width: 569px !important;
     }
 }
 
 @media only screen and (max-width: 680px) {
-    
+    .option-div{
+        width: 366px !important;
+    }
+    .option{
+        padding: 12px 50px !important;
+    }
     .general-submit-div {
         width: 420px;
         align-items: center;
     } 
-
+    .create-acc-checkbox-text {
+        width: 393px !important;
+    }
     .general-google-btn {
         width: 420px;
     }
@@ -788,17 +779,6 @@ input[type=password], select {
         width: 375px;
         max-width: 100% !important;
         height: 48px;
-        padding: 8px 16px;
-        background-color: rgb(246, 247, 249);
-        border-radius: 8px;
-        color: rgb(23, 23, 23) !important;
-        font-weight: 500;
-        font-size: 9px;
-        position: relative;
-        align-items: center;
-        justify-content: flex-start;
-        display: flex;
-        cursor: pointer;
     }
 
     .placeholder-text {
@@ -819,6 +799,12 @@ input[type=password], select {
     h3 {
         font-size: 30px !important;
     }
+    .general-right-form-txt{
+        font-size: 12px !important;
+    }
+    .general-right-form-txt {
+        width: 340px !important;
+    }
     .general-progress-border-div{
         width: 300px;
     }
@@ -826,22 +812,19 @@ input[type=password], select {
     .create-new-acc-checkbox {
         width: 100%;
     }
-
+    .create-acc-checkbox-text {
+        width: 280px !important;
+    }
     .disabled-button {
         font-size: 11px;
         width: 308px !important;
         padding: 0px !important;
     }
-
-
     .connect-platform-box {
         width: 320px !important;
     }
 // აექ
  
-
-    
-
     .member-list-div {
         align-items: center;
     }
@@ -882,20 +865,8 @@ input[type=password], select {
         display: flex;
         flex-direction: column;
     }
-
-
-    .create-new-account-txt {
-        width: 320px !important;
-    }
-
     .general-save-checkbox-div {
-        width: 220px !important;
-        grid-area: 2px !important;
         font-size: 12px;
-    }
-
-    .tertiary-font-color {
-        width: 320px !important;
     }
 }
 
@@ -904,17 +875,16 @@ input[type=password], select {
     h3 {
         font-size: 26px;
     }
-
     .general-right-form-txt {
-        font-size: 13px !important;
         width: 342px;
     }
 
     .right-form-gap {
         gap: 90px !important;
     }
-
-
+    .option-div {
+        width: 351px !important;
+    }
     .connect-platform-box {
         width: 300px !important;
     }
@@ -922,18 +892,6 @@ input[type=password], select {
     .general-select {
         width: 350px !important;
         max-width: 100% !important;
-        height: 48px;
-        padding: 8px 16px;
-        background-color: rgb(246, 247, 249);
-        border-radius: 8px;
-        color: rgb(23, 23, 23) !important;
-        font-weight: 500;
-        font-size: 9px;
-        position: relative;
-        align-items: center;
-        justify-content: flex-start;
-        display: flex;
-        cursor: pointer;
     }
 
     .placeholder-text {
@@ -958,12 +916,6 @@ input[type=password], select {
     
 }
 
-@media only screen and (max-width: 400px)  {
-    .option-div {
-        width: 335px !important;
-        gap: 12px;
-    }
-}
 
 @media only screen and (max-width: 390px) {
     .right-form-gap {
@@ -976,12 +928,16 @@ input[type=password], select {
     h3 {
         font-size: 25px !important;
     }
-    
-    .option-div {
-        width: 280px !important;
-        gap: 10px;
+    .general-right-form-txt{
+        font-size: 11px !important;
+        width: 300px !important;
     }
-
+    .option-div {
+        width: 270px !important;
+    }
+    .option {
+        padding: 12px 30px !important;
+    }
     .general-select {
         width: 280px !important;
     }
@@ -1006,9 +962,9 @@ input[type=password], select {
         width: 300px;
     }
 
-    label {
-        font-size: 11px;
-    }
+    // label {
+    //     font-size: 11px;
+    // }
 
         .password-reset-right-form-gap {
         gap: 330px !important;
@@ -1017,11 +973,5 @@ input[type=password], select {
     
 }
 
-
-@media only screen and (max-width: 325px) {
-    .general-right {
-        margin-left: 34px;
-    }
-}
 
 

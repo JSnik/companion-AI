@@ -79,7 +79,7 @@
                     <div class="general-save-checkbox-div-main">
                         <div class="general-save-checkbox-div create-new-acc-checkbox">
                             <input class="general-checkbox" type="checkbox" id="remember-checkbox">
-                            <label class="tertiary-font-color " for="remember-checkbox general-checkbox-crossed" >By clicking “Create account” you automatically agree to <a href="">our Terms of Service</a> and <a href="">Privacy Policy</a></label>
+                            <label class="tertiary-font-color create-acc-checkbox-text" for="remember-checkbox general-checkbox-crossed" >By clicking “Create account” you automatically agree to  <a href="">our Terms of Service</a> and <a href="">Privacy Policy</a></label>
                         </div>
                     </div>
                 </div>
@@ -313,7 +313,7 @@
 
                 <!--popup-->
                 <ng-container *ngIf="finalStep">
-                    <div class="verify-email-right-form-gap">
+                    <div class="right-form-gap">
                         <form class="general-right-form email-sent-form" action="">
                             <div class="general-right-form-txts verify-email-right-form-txts ends">
                                 <svg width="184" height="164" viewBox="0 0 184 164" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.15"><path d="M182.904 81.5203C182.356 79.5277 182.127 77.3834 172.081 74.1485C170.993 65.6164 169.215 57.6378 166.295 54.3455C164.962 52.8449 158.898 44.6203 120.009 41.8856C116.93 32.6155 114.853 32.3818 112.923 31.8488C110.993 31.3158 103.907 30.9345 97.1111 30.8033V19.1265C100.166 17.3553 102.222 14.0425 102.222 10.25C102.222 4.5879 97.6468 0 92 0C86.3532 0 81.7778 4.5879 81.7778 10.25C81.7778 14.0425 83.8345 17.3512 86.8889 19.1265V30.8033C80.0932 30.9345 73.0071 31.3158 71.0772 31.8488C69.1472 32.3818 67.07 32.6155 63.9911 41.8856C25.1017 44.6203 19.0379 52.8408 17.7049 54.3455C14.7854 57.6378 13.0067 65.6123 11.9191 74.1485C1.86858 77.3875 1.64371 79.5318 1.09579 81.5203C0.425216 83.9557 0 94.5747 0 102.5C0 110.425 0.425216 121.044 1.09579 123.48C1.64371 125.472 1.87267 127.617 11.9191 130.852C13.0067 139.384 14.7854 147.362 17.7049 150.655C19.3078 152.463 27.7554 164 92 164C156.245 164 164.692 152.463 166.295 150.655C169.215 147.362 170.993 139.388 172.081 130.852C182.131 127.613 182.356 125.468 182.904 123.48C183.575 121.044 184 110.425 184 102.5C184 94.5747 183.575 83.9557 182.904 81.5203ZM147.723 134.603C146.521 135.808 140.183 143.5 92 143.5C43.8165 143.5 37.4787 135.808 36.2766 134.603C30.6299 128.941 30.6667 102.5 30.6667 102.5C30.6667 102.5 30.6299 76.0591 36.2766 70.397C37.4787 69.1916 43.8165 61.5 92 61.5C140.183 61.5 146.521 69.1916 147.723 70.397C153.37 76.0591 153.333 102.5 153.333 102.5C153.333 102.5 153.37 128.941 147.723 134.603Z" fill="#171717"/><path d="M61.3336 123C66.9791 123 71.5558 113.822 71.5558 102.5C71.5558 91.1782 66.9791 82 61.3336 82C55.688 82 51.1113 91.1782 51.1113 102.5C51.1113 113.822 55.688 123 61.3336 123Z" fill="#171717"/><path d="M122.667 123C128.312 123 132.889 113.822 132.889 102.5C132.889 91.1782 128.312 82 122.667 82C117.021 82 112.444 91.1782 112.444 102.5C112.444 113.822 117.021 123 122.667 123Z" fill="#171717"/><path d="M102.223 123C102.223 128.662 97.6473 133.25 92.0005 133.25C86.3538 133.25 81.7783 128.662 81.7783 123H102.223Z" fill="#171717"/></g>
@@ -323,14 +323,14 @@
 
                             <div class="person-inf">
                                 <div class="flow-img-border">
-                                    <img class="flow-img" src="/assets/img/Bot_Wink.svg" alt="">
+                                    <img class="flow-img" src="/assets/img/flow-img.png" alt="">
                                 </div>
-                                <h3>@dfsdsfsf</h3>
-                                <p>textadadsda</p>
+                                <h3>Beqa Supertramp</h3>
+                                <p class="tertiary-font-color">Beqa.Supertramp@gmail.com</p>
                             </div>
                         </form>
 
-                        <div class="general-submit-div">
+                        <div class="general-submit-div back-to-flow-responsive-div">
                             <button class="general-button" routerLink="../login">Back to Log in</button>
                             <button class="general-button after-responsive" routerLink="../login">Back to Sign up Flow</button>
                             <p class="tertiary-font-color general-button-bottom-txt cursor-ponter" (click)="returnToFirstStep()">Back to Password Reset Flow</p>
