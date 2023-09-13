@@ -21,22 +21,11 @@
 
 /// forgot password styles ///
 
-.password-reset-right-form-gap{
-  gap: 468px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 
 /// email sent styles ///
 
-.email-sent-right-form-gap{
-  gap: 468px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .email-sent-form{
   gap: 64px;
   display: flex;
@@ -57,22 +46,12 @@
 
 /// reset password styles ///
 
-.reset-password-right-form-gap{
-  gap: 309px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 
 /// create new account styles ///
 
-.create-new-account-right-form-gap{
-  gap: 81px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .create-new-account-txt{
   font-size: 13px;
   font-weight: 400;
@@ -90,18 +69,14 @@
   gap: 8px;
   align-items: flex-start;
   text-align: start;
+}
+.create-acc-checkbox-text{
   width: 494px;
-
 }
 
 /// verify email styles ///
 
-.verify-email-right-form-gap{
-  gap: 163px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .verify-email-right-form-txts{
   gap: 32px;
 }
@@ -141,12 +116,7 @@
 /// nickname styles ///
 
 
-.nickname-right-form-gap{
-  //gap: 465px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 
 /// what brings you here styles ///
@@ -159,12 +129,7 @@
   align-items: flex-start;
   gap: 16px;
 }
-.what-brings-you-here-right-form-gap{
-  gap: 311px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .option{
   display: flex;
   height: 38px;
@@ -190,12 +155,7 @@
 /// workspace styles ///
 
 
-.workspace-right-form-gap{
-  //gap: 465px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 
 
@@ -259,12 +219,7 @@
 
 /// invite teammate styles ///
 
-.invite-your-teammate-right-form-gap{
-  //gap: 160px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .disabled-button{
   border-radius: 8px;
@@ -348,12 +303,7 @@
 }
 /// connect your platforms styles ///
 
-.connect-platform-right-form-gap{
-  //gap: 410px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .connect-platform-div{
   display: flex;
@@ -516,12 +466,18 @@
   color: #434CE6;
 }
 
+.back-to-flow-responsive-div{
+  gap: 12px;
+}
 .flow-img-border {
   width: 136px;
   height: 136px;
   border-radius: 222px;
-  background: var(--light-light-1, #FFF);
-  border: 2px solid var(--Primary, #434CE6);
+  background: rgb(255, 255, 255);
+  border: 2px solid  rgb(67, 76, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
