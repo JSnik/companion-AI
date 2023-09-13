@@ -29,7 +29,7 @@
 <!--    first-->
     <div class="general-right secondary-bg-color">
         <div class="right-form-gap" *ngIf="createFirst">
-            <form class="general-right-form" action="" [formGroup]="form">
+            <form class="general-right-form  main-f" action="" [formGroup]="form">
                 <div class="general-right-form-txts">
                     <h3>Create new account</h3>
                     <span class="tertiary-font-color general-right-form-txt">your teammates will see your name on shared recordings and comments in meeting notes</span>
@@ -54,20 +54,22 @@
                                             <label class="general-input-placeholder-text" for="">Password</label>
                                         </div>
                                 </div>
-                                <span class="general-input-icon">
-                                    <img src="/assets/img/eye-slash.png" alt="" (click)="showHide(1)">
+                                <span class="general-input-icon" (click)="showHide(1)">
+                                    <img src="/assets/img/eye-slash.png" alt="" *ngIf="isPasswordVisible">
+                                    <img src="/assets/img/eye.png" alt="" *ngIf="!isPasswordVisible">
                                 </span>
                             </div>
-                            <p class=" general-error-txt tertiary-font-color create-new-account-txt"> &#9679; Password must contain min 1 capital letter</p>
+<!--                            <p class=" general-error-txt tertiary-font-color create-new-account-txt"> &#9679; Password must contain min 1 capital letter</p>-->
                         </div>
                     <div class="general-input-container">
                         <div class="general-input-group">
                             <input class="general-input" [type]="typeSecond" placeholder=" " formControlName="confirmPassword"
-                            [class.invalid-input]="form.get('confirmPassword')!.invalid && form.get('confirmPassword')!.touched && form.get('confirmPassword')!.value.length">
+                            [class.invalid-input]="isTrue || form.get('confirmPassword')!.invalid && form.get('confirmPassword')!.touched && form.get('confirmPassword')!.value.length">
                             <label class="general-input-placeholder-text" for="">Confirm Password</label>
                         </div>
-                        <span class="general-input-icon">
-                            <img src="/assets/img/eye-slash.png" alt="" (click)="showHide(2)">
+                        <span class="general-input-icon" (click)="showHide(2)">
+                            <img src="/assets/img/eye-slash.png" alt="" *ngIf="isPasswordVisibleSecond">
+                            <img src="/assets/img/eye.png" alt="" *ngIf="!isPasswordVisibleSecond">
                         </span>
                     </div>
 

@@ -156,7 +156,7 @@ html{
 .general-checkbox:checked{
     border: none;
     content: none;
-    background-image: url(/assets/img/vector.png);
+    background-image: url(/assets/img/Vector.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 11px 9px;
@@ -342,6 +342,7 @@ input[type=password], select {
     display: flex;
     align-items: center;
     flex-direction: column;
+
 }
 .general-error{
     display: flex;

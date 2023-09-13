@@ -45,9 +45,9 @@ export class AppComponent implements OnInit {
   }
 
   loaderNone(): void {
-    setTimeout(() => {
-      this.loader = false;
-    }, 1200);
+    // setTimeout(() => {
+    //   this.loader = false;
+    // }, 1200);
   }
 
 }

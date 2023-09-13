@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators} from "@angular/forms";
 import {AuthService} from "../../../core/services/auth.service";
 import {Subject, takeUntil} from "rxjs";
 import {containsUppercase} from "../auth.regex";
@@ -174,6 +174,7 @@ export class RegisterComponent implements OnInit, OnDestroy{
     }
 
     ngOnInit() {
+
         this.initializeForm();
 
         if (localStorage.getItem('verify')) {
@@ -190,13 +191,43 @@ export class RegisterComponent implements OnInit, OnDestroy{
         setTimeout(() => {
             localStorage.removeItem('verify')
         }, 1500)
+        this.form.valueChanges
+            .subscribe((item: any) => {
+                if (item.confirmPassword != item.password) {
+                    this.isTrue = true
+                } else {
+                    this.isTrue = false;
+                }
+                console.log(this.isTrue)
+
+            })
     }
+    isTrue: boolean = false;
+
 
     initializeForm(): void {
         this.form = this.fb.group({
             email: ['', [Validators.required, Validators.email]],
-            password: ['', [Validators.required, containsUppercase(), Validators.minLength(8), Validators.maxLength(64)]],
-            confirmPassword: ['', [Validators.required, containsUppercase(), Validators.minLength(8), Validators.maxLength(64)]],
+            password: [
+                '',
+                [
+                    Validators.required,
+                    containsUppercase(),
+                    Validators.minLength(8),
+                    Validators.maxLength(64),
+                    this.myValidator
+                ]
+            ],
+            confirmPassword: [
+                '',
+                [
+                    Validators.required,
+                    containsUppercase(),
+                    Validators.minLength(8),
+                    Validators.maxLength(64),
+                    this.myValidator
+                ]
+            ],
             name: ['', Validators.required]
         })
 
@@ -208,6 +239,16 @@ export class RegisterComponent implements OnInit, OnDestroy{
             name: ['', [Validators.required]]
         })
     }
+
+    myValidator = (control: FormControl) => {
+            const specialCharacterPattern = /[!@#$%^&*?><()_?/~]/;
+
+            if (!specialCharacterPattern.test(control.value)) {
+                return { specialCharacterRequired: true };
+            }
+
+            return null;
+    };
 
 
     returnToFirstStep() {

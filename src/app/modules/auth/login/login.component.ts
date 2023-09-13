@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from "../../../core/services/auth.service";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Subject, takeUntil} from "rxjs";
 import {Router} from "@angular/router";
 import {SocialAuthService} from "@abacritt/angularx-social-login";
@@ -29,10 +29,18 @@ export class LoginComponent implements OnInit, OnDestroy{
   initializeForm(): void {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(3)]]
+      password: ['', [Validators.required, Validators.minLength(3), this.myValidator]]
     })
   }
+  myValidator = (control: FormControl) => {
+    const specialCharacterPattern = /[!@#$%^&*?><()_?/~]/;
 
+    if (!specialCharacterPattern.test(control.value)) {
+      return { specialCharacterRequired: true };
+    }
+
+    return null;
+  };
   login() {
     const emailValue = this.form.get('email')!.value;
     const passwordValue = this.form.get('password')!.value;

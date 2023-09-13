@@ -16,8 +16,12 @@
   align-items: center;
   justify-content: space-between;
 }
-
-
+.main-f {
+  padding-top: 60px;
+}
+.general-right-form {
+  gap: 15px;
+}
 
 /// forgot password styles ///
 
@@ -32,6 +36,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding-top: 40px;
 
   .right-from-txt{
     font-size: 18px !important;
