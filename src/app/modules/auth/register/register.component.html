@@ -59,7 +59,7 @@
                                     <img src="/assets/img/eye.png" alt="" *ngIf="!isPasswordVisible">
                                 </span>
                             </div>
-<!--                            <p class=" general-error-txt tertiary-font-color create-new-account-txt"> &#9679; Password must contain min 1 capital letter</p>-->
+                            <p class="sixth-font-color general-error-txt tertiary-font-color create-new-account-txt" *ngIf="form.get('password')!.invalid && form.get('password')!.touched"> &#9679; Password must contain min 1 capital letter and 1 special character</p>
                         </div>
                     <div class="general-input-container">
                         <div class="general-input-group">

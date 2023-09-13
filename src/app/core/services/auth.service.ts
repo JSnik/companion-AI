@@ -52,4 +52,9 @@ export class AuthService {
     }
     return this.http.patch<any>(url, obj)
   }
+
+  deleteUser(email : any): Observable<any> {
+    const url = this.baseUrl + `users/deleteUser`;
+    return this.http.post<any>(url, {email: email})
+  }
  }
