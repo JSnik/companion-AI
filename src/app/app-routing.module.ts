@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'calendar',
+    loadChildren: () => import('./modules/calendar/calendar.module').then(m => m.CalendarModule)
+  },
+  {
     path: 'register/confirm/:token',
     component: SuccessComponent
   },

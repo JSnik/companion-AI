@@ -14,6 +14,7 @@ import {
   FacebookLoginProvider
 } from '@abacritt/angularx-social-login';
 import {ShowHidePasswordDirective} from "./modules/shared/click.directive";
+import {CalendarModule} from "./modules/calendar/calendar.module";
 @NgModule({
   declarations: [
     AppComponent
@@ -26,7 +27,8 @@ import {ShowHidePasswordDirective} from "./modules/shared/click.directive";
     BrowserAnimationsModule,
     AuthModule,
     HttpClientModule,
-    SocialLoginModule
+    SocialLoginModule,
+    CalendarModule
   ],
   providers: [
     {
