@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CalendarComponent } from './calendar.component';
 import {AppRoutingModule} from "../../app-routing.module";
 import {RouterModule} from "@angular/router";
+import { CalendarToolComponent } from './calendar-tool/calendar-tool.component';
+import { CalendarCardComponent } from './calendar-card/calendar-card.component';
 
 const routes = [
   {
@@ -12,7 +14,9 @@ const routes = [
 ]
 @NgModule({
   declarations: [
-    CalendarComponent
+    CalendarComponent,
+    CalendarToolComponent,
+    CalendarCardComponent
   ],
   imports: [
     CommonModule,
