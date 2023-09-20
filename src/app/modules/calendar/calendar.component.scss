@@ -26,10 +26,17 @@
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  line-height: 100%;
+  line-height: normal;
   display: flex;
 }
-
+.cal-title-year{
+  color: var(--Dark-2, #2E2E2E);
+  font-family: 'Inter';
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .span-w {
   display: flex;
   padding: 4px 8px;
@@ -96,6 +103,7 @@
   gap: 6px;
   border-radius: 333px;
   background: var(--Primary-Transparent, rgba(67, 76, 230, 0.15));
+  color: rgba(67, 76, 230, 1);
   border: none;
 }
 
