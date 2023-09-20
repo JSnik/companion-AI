@@ -113,6 +113,7 @@
   font-weight: 500;
   line-height: normal;
   border-radius: 333px;
+  cursor: pointer;
 }
 
 .btn-con {
@@ -247,6 +248,11 @@
     background: var(--light-light-1, #FFF);
 }
 
+
+.numdays-res {
+  display: none;
+}
+
 // responsive
 
 @media only screen and (max-width: 1250px) {
@@ -352,6 +358,54 @@
 }
 
 
+@media only screen and (max-width:660px) {
+  .days {
+    display: none;
+  }
+
+  #res-none {
+    display: none !important;
+  }
+
+  .res1 {
+    display: flex !important; 
+  }
+
+  .res-menu {
+    display: flex !important;
+  }
+
+  .numdays {
+    display: none;
+  }
+
+  .numdays-table {
+    display: none;
+  }
+
+  .numdays-res {
+    display: flex !important;
+      background-color: red;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .numdays-table-res {
+    width: 660px !important;
+    border: 1px solid #DADCE0;
+    background: #FFF;
+    height: 51.6px !important;
+    
+  }
+
+
+  .times {
+    padding: 0px 5px;
+}
+
+  
+}
+
 
 .active {
     color: var(--Link, #2954EC);
@@ -361,3 +415,18 @@
     font-weight: 500;
     line-height: normal;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// navigtion
