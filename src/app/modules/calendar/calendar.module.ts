@@ -5,6 +5,10 @@ import {AppRoutingModule} from "../../app-routing.module";
 import {RouterModule} from "@angular/router";
 import { CalendarToolComponent } from './calendar-tool/calendar-tool.component';
 import { CalendarCardComponent } from './calendar-card/calendar-card.component';
+import { CalendarMeetDetailsComponent } from './calendar-meet-details/calendar-meet-details.component';
+import { CalendarMemberCardComponent } from './calendar-member-card/calendar-member-card.component';
+import { CalendarGeneralInputComponent } from './calendar-general-input/calendar-general-input.component';
+import { CalendarMeetCardComponent } from './calendar-meet-card/calendar-meet-card.component';
 
 const routes = [
   {
@@ -16,7 +20,11 @@ const routes = [
   declarations: [
     CalendarComponent,
     CalendarToolComponent,
-    CalendarCardComponent
+    CalendarCardComponent,
+    CalendarMeetDetailsComponent,
+    CalendarMemberCardComponent,
+    CalendarGeneralInputComponent,
+    CalendarMeetCardComponent
   ],
   imports: [
     CommonModule,
