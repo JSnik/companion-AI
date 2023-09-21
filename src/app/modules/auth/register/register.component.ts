@@ -256,6 +256,7 @@ export class RegisterComponent implements OnInit, OnDestroy{
         this.createSecond = false;
         this.styleBarFirst = false;
         this.finalStep = false;
+        this.checked = !this.checked;
     }
     ngOnDestroy() {
         this.destroy$.next(true);
