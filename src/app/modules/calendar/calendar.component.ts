@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent {
+  settings:boolean = false
 
+  showSettings() {
+    this.settings = !this.settings
+  }
 }
