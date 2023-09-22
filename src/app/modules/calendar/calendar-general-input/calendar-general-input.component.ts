@@ -8,5 +8,5 @@ import {Component, Input} from '@angular/core';
 export class CalendarGeneralInputComponent {
   @Input() height: number;
   @Input() width: number;
-  @Input() heightDef: number = 150;
+  @Input() heightDef: number = 229;
 }

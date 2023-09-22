@@ -1,11 +1,12 @@
 .nav-main {
     position: fixed;
     z-index: 1;
-    top: 90%;
+    top: 70%;///90 იყო მანამდე///
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .navigation {
@@ -28,7 +29,12 @@
     gap: 4px;
 }
 
-
+.invite-bar-input[type=text], select{
+    color: var(--Link, #2954EC) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+}
 
 .nav-text {
     color: var(--Dark-5, #A2A2A2);
@@ -51,8 +57,15 @@
     .nav-main {
         position: fixed;
         z-index: 1;
-        top: 89%;
+        top: 70%;
     }
+    .invite-bar{
+        width: 430px !important;
+    }
+    .invite-bar-input{
+        width: 398px !important;
+    }
+
     .nav-box{
         display: flex;
         width: 66px;
@@ -70,4 +83,61 @@
    .nav-main {
     display: none;
    }
+   .invite-bar{
+    display: none;
+   }
+}
+
+.invite-bar{
+    display: flex;
+    padding: 16px 16px;
+    flex-direction: column;
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--strokes-stroke-1, #DADCE0);
+    background: var(--light-light-1, #FFF);
+    z-index: 1;
+}
+.invite-bar-input{
+    width: 518px;
+    position: relative;
+}
+.invite-bar-icon{
+    width: 24px;
+    height: 24px;
+}
+.invite-bar-meet-box{
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--Content, #F6F7F9);
+}
+.invite-bar-button{
+    display: flex;
+    padding: 6px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: var(--Primary, #434CE6);
+    font-size: 13px;
+    font-style: normal;
+    border: none;
+    color: var(--light-light-1, #FFF);
+    font-weight: 500;
+    position: absolute;
+    right: 15px;
+    top: 15px; 
+}
+.invite-bar-meet-text{
+    color: var(--Dark-1, #171717);
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }

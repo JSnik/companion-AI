@@ -1,0 +1,268 @@
+
+.calendar-meet-details-unfilled{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.20);
+}
+.input-width{
+    width: 100%;
+}
+.input-div{
+    padding: 18px;
+    width: 100%;
+}
+.input-border-gap{
+    display: flex;
+    gap: 12px;
+}
+
+.input-divs{
+    display: flex;
+    align-items: center;
+}
+.meeting-title{
+    border: none;
+    stroke: none;
+    outline: none;
+    width: 100%;
+}
+.meeting-title:not(:placeholder-shown) {
+    color:  rgb(23, 23, 23);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+.meeting-title::placeholder{
+    color: rgba(23, 23, 23, 0.15);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.meeting-description{
+    border: none;
+    stroke: none;
+    outline: none;
+    height: 34px;
+    width: 100%;
+    align-self: stretch;
+}
+.meeting-description:not(:placeholder-shown) {
+    overflow: hidden;
+    color:  rgb(87, 94, 115);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+.meeting-description::placeholder{
+    overflow: hidden;
+    color: rgba(23, 23, 23, 0.15);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.form-div{
+    padding: 18px;
+    border-top: 1px solid  rgb(218, 220, 224);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.meeting-location-date-div{
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 12px;
+    width: 514px;
+    gap: 14px;
+    background-color:  rgb(246, 247, 249);
+}
+.meeting-location-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.meeting-location-space-between{
+    width: 100%;
+}
+.meeting-location-toggle-div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.meet-dot{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+}
+.add-meeting-text{
+    color: rgb(41, 84, 236);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+}
+.time-repeat-gap{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.meet-time{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+}
+.repeat-text{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+}
+.repeat-div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.all-day-text{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.meet-details-border{
+    width: 4px;
+    height: 51px;
+    border-radius: 1px;
+}
+.border-between{
+    width: 1px;
+    height: 32px;
+    background-color: rgb(217, 217, 217);
+}
+
+.Part-Comp-div{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.participants-div{
+    display: flex;
+    width: 315px;
+    padding: 12px 14px 12px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 12px;
+    border: 1px solid #F2F2F3;
+}
+.participants-add-icon-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+.companion-div{
+    display: flex;
+    width: 181px;
+    height: 81px;
+    padding: 12px 14px 12px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 12px;
+    border: 1px solid #F2F2F3;
+}
+.companion-toggle-div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.documents-div{
+    display: flex;
+    width: 514px;
+    height: 81px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 12px;
+    border: 1px solid rgb(242, 242, 243);
+}
+.documents-text{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+}
+.custom-file-input {
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+.file-input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file-label {
+    color: rgb(125, 132, 148);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+.bottom-header-div{
+    display: flex;
+    width: 550px;
+    padding: 16px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #F1F1F1;
+}
+.bottom-header-img-div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.bottom-header-buttons-div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom-header-color-chooser-div{
+    width: 18px;
+    height: 18px;
+    background-color: rgba(151, 71, 255, 1);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+.bottom-header-buttons-gap{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.bottom-header-status{
+    width: 16px;
+    height: 10px;
+    border-radius: 333px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgb(97, 197, 84);
+}
