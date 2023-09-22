@@ -9,4 +9,5 @@ export class CalendarGeneralInputComponent {
   @Input() height: number;
   @Input() width: number;
   @Input() heightDef: number = 229;
+  
 }
